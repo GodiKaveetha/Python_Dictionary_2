@@ -1,0 +1,49 @@
+1. Find the highest frequency character in the string.
+s = "kaveetha"
+freq = {}
+for char in s:
+    if char in freq:
+        freq[char] += 1 
+    else:
+        freq[char] = 1
+max_char = max(freq, key=freq.get)
+print(max_char)
+
+s = "kaveetha"
+freq = {}
+for char in s:
+    if char in freq:
+        freq[char] += 1 
+    else:
+        freq[char] = 1
+max_freq = 0
+max_char = ''"
+for char in freq:
+    if freq[char] > max_freq:
+        max_freq = freq[char]
+        max_char = char
+print(max_char)
+
+2. Find it is anagram or not using dictionary
+a = "listen"
+b = "silent"
+if len(a) != len(b):
+    print("Not anagram")
+else:
+    freq1 = {}
+    freq2 = {}
+    for char in a:
+        if char in freq1:
+            freq1[char] += 1
+        else:
+            freq1[char] = 1
+    for char in b:
+        if char in freq2:
+            freq2[char] += 1
+        else:
+            freq2[char] = 1 
+    if freq1 == freq2:
+        print("anagram")
+    else:
+        print("Not anagram")
+
